@@ -1,0 +1,162 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #f1f1f1, #ececec);
+  color: #333;
+  scroll-behavior: smooth;
+  padding-top: 60px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+li a:hover:not(.active) {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.menu-btn {
+  display: none;
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  font-size: 25px;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 9999;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    background-color: #333;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+  }
+
+  ul.show {
+    display: flex;
+  }
+
+  li a {
+    padding: 12px;
+    font-size: 20px;
+  }
+
+  .menu-btn.open {
+    background-color: #04aa6d;
+  }
+}
+
+.content {
+  padding: 40px 20px 20px 20px;
+  background-color: #f9f9f9;
+  margin-top: 60px;
+}
+
+section {
+  padding: 60px 40px;
+  margin: 40px 0;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #04aa6d;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.cta-button:hover {
+  background-color: #2a8e58;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  margin-top: 40px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #04aa6d;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
